@@ -4,13 +4,11 @@
 
 import fs from "fs";
 
-const input = `1) item one
-2) item two
-3) item three
-4) item four`;
-
+const INPUT_PATH = "ins/split-list-items-input.txt";
 const OUTPUT_PATH = "outs/splitted-list-items.json";
-const SPLIT_SYMBOL = ")";
+const SPLIT_SYMBOL = "•";
+
+const input = fs.readFileSync(INPUT_PATH, "utf-8");
 
 function splitListItems(text: string) {
   const newLinesSplitted = text

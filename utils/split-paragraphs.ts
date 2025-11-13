@@ -3,11 +3,10 @@
 
 import fs from "fs";
 
-const input = `This is the first paragraph.
-This is the second paragraph.
-This is the third paragraph.`;
-
+const INPUT_PATH = "ins/split-paragraphs-input.txt";
 const OUTPUT_PATH = "outs/splitted-paragraphs.json";
+
+const input = fs.readFileSync(INPUT_PATH, "utf-8");
 
 function splitParagraphs(text: string) {
   return text
